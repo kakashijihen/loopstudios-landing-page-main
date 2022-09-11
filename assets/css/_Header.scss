@@ -1,0 +1,139 @@
+@use 'Variables' as *;
+
+header{
+    background: {
+        color: #0006;
+        image: url(../images/desktop/image-hero.jpg);
+        repeat:no-repeat;
+        position: center;
+        size: cover;
+        blend-mode:multiply;
+    }
+    padding: 65px $px;
+    margin-bottom: $mb;
+    @media screen and (min-width: $sm){
+        background: {
+            image: url(../images/desktop/image-hero.jpg);
+            repeat:no-repeat;
+            position: center;
+            size: cover;
+        }
+        padding: 40px $px;        
+    }
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 120px;
+    &_nav {
+        &__mobile{
+            display: none;
+        }
+    }
+    &_toggler{
+        cursor: pointer;
+        display: none;
+    }
+    @media screen and (max-width: $lg) {
+        &_toggler{
+            display: block;
+        }
+        &_nav{
+            position: fixed;
+            top:      0;
+            left:  -100%;
+            width:  100%;
+            height: 100vh;
+            background: $Black;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            z-index: 10;
+            transition: .25s;
+            &.active{
+                left: 0;
+            }
+            ul{
+                grid-template-columns: 1fr;
+                gap: 25px;
+                li{
+                    a{
+                        font-family: $JosefinSans;
+                        text-transform: uppercase;
+                        font-size: 25px;
+                        font-weight: $fw-300;
+                    }
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            &__mobile{
+                display: flex;
+                position: absolute;
+                top: 40px;
+                left: 25px;
+                right: 25px;
+                justify-content: space-between;
+                align-items: center;
+                img{
+                    max-width: 145px;
+                }
+                &_close-btn{
+                    cursor: pointer;
+                }
+                
+            }
+        }
+    }
+    @media screen and (max-width: $sm){
+        margin-bottom: 160px;
+        &_brand{
+            max-width: 145px;
+        }
+    }
+}
+
+nav{
+    ul{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(min-content,min-content));
+        gap: 32px;
+        li{
+            position: relative;
+            &::after{
+                position: absolute;
+                bottom: -10px;
+                left:    50% ;
+                width:    0  ;
+                height:   2px;
+                transform: translateX(-50%);
+                background: $White;
+            }
+            &:hover{
+                &::after{
+                    width: 25px;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    h1{
+        max-width: 650px;
+        padding: 38px;
+        margin-bottom:  80px;
+        border: 3px solid $White;
+        font-size: $fs-h1;
+        color: $White;
+        @media screen and (min-width: $md ) {
+            padding: 22px;
+        }
+        @media screen and (max-width: $sm){
+            margin-bottom: 175px;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@use 'Variables' as *;
+footer{
+    background-color: $Black;
+    padding: 45px $px;
+    display: flex;    
+    justify-content: space-between;
+    @media screen and (max-width: $lg){
+        flex-direction: column;
+    }
+    @media screen and (max-width: $md){
+        padding: 55px $px;
+    }
+}
+
+.footer_left{
+    &__brand{
+        margin-bottom: 20px;
+        img{
+            max-width: 140px;
+        }
+    }
+    @media screen and (max-width: $lg){
+        margin-bottom: 30px;
+        &__brand{
+            text-align: center;
+        }
+        &_nav{
+            ul{
+                place-content: center;
+            }
+        }
+    }
+    @media screen and (max-width: $md){
+        margin-bottom: 50px;
+        &__brand{
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (max-width: $sm){
+        &_nav{
+            ul{
+                grid-template-columns: 1fr;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.footer_right{
+    text-align: right;
+    &__social-links{
+        margin-bottom: 20px;
+        a{
+            font-size: 1.8em;
+            color: $White;
+            &:not(:last-child){
+                margin-right: 12px;
+            }
+        }
+        @media screen and (max-width: $sm){
+            margin-bottom: 15px;
+        }
+    }
+    @media screen and (max-width: $lg){
+        text-align: center;
+    }
+}
+
+.copyright{
+    color: $VeryDarkGray;
+}
+
+.attribution{
+    text-align: center;
+    background-color: $Black;
+    font-size: 14px;
+    p{
+        color: $White;
+    }
+    a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

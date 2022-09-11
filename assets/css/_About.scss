@@ -1,0 +1,55 @@
+@use 'Variables' as *;
+
+.about{
+    position: relative;
+    padding: 0 $px;
+    margin-bottom: $mb;
+    .about{
+        &_img{
+            img{
+                display: block;
+            }
+            @media screen and (max-width:$xl){
+                margin-bottom: 80px;
+                img{
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width:$sm){
+                margin-bottom: 50px;
+            }
+        }
+    }
+    
+    .content_article{
+        position: absolute;
+        top: 180px;
+        left: 50% ;
+        padding: 95px;
+        max-width: 640px;
+        background: $White;
+        h2{
+            font-size: $fs-h2;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $DarkGray;
+            line-height: 1.7;
+        }
+        @media screen and (max-width:$xl){
+            position: static;
+            max-width: 100%;
+            text-align: center;
+            padding: 0 95px;
+        }
+        @media screen and (max-width: $md ) {
+            padding: 0 50px;
+        }
+        @media screen and (max-width:$sm){
+            padding: 0 15px;
+            h2{
+                margin-bottom: 20px;
+            }
+        }
+    }  
+}

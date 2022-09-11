@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+//breakpoints
+$xl:1200px;
+$lg:992px;
+$md:768px;
+$sm:576px;
+
+//global variables 
+:root{
+    //colores en el root
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 0%);
+    --DarkGray: hsl(0, 0%, 55%);
+    --VeryDarkGray: hsl(0, 0%, 41%);
+
+    //root typography
+    --Alata:'Alata', sans-serif;
+    --JosefinSans:'Josefin Sans', sans-serif;
+    --fs-h1:4.7em;
+    --fs-h2:3.2em;
+    --fs-h3:2.1em;
+    --fs-regular:15px;
+    --fw-300:300;
+    
+    //spacing
+    --px:165px;
+    --mb:180px;
+}
+
+//colors
+
+$White: var(--White);
+$Black: var(--Black);
+$DarkGray: var(--DarkGray);
+$VeryDarkGray: var(--VeryDarkGray);
+
+//typography    
+
+$Alata:var(--Alata);
+$JosefinSans:var(--JosefinSans);
+$fs-h1:var(--fs-h1);
+$fs-h2:var(--fs-h2);
+$fs-h3:var(--fs-h3);
+$fs-regular:var(--fs-regular);
+$fw-300:var(--fw-300);
+
+//spacing
+$px:var(--px);
+$mb:var(--mb);
+
+@media screen and (max-width:$xl) {
+    :root{
+        --px:80px;
+    }
+    $px:var(--px);
+}
+
+@media screen and (max-width:$md) {
+    :root{
+
+        //typography
+        --fs-h1:4em;
+        --fs-h2:2.8em;
+
+        //spacing
+        --px:40px;
+        --mb:120px;
+    }
+    $fs-h1:var(--fs-h1);
+    $fs-h2:var(--fs-h2);
+    $px:var(--px);
+    $mb:var(--mb);
+}
+
+@media screen and (max-width:$sm){
+    :root{
+        //typography
+        --fs-h1:2.6em;
+        --fs-h2:2.1em;
+        --fs-h3:1.6em;
+
+        //spacing
+        --px:25px;
+        --mb:100px;
+    }
+    $fs-h1:var(--fs-h1);
+    $fs-h2:var(--fs-h2);
+    $px:var(--px);
+    $mb:var(--mb);
+}

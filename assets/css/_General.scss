@@ -1,0 +1,36 @@
+@use 'Variables' as *;
+
+//reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html { 
+    font-family: $Alata; 
+    font-size: $fs-regular;
+  }
+  
+  li { list-style: none; }
+  
+  a { 
+    text-decoration: none; 
+    display: inline-block;
+    color: $White;
+  }
+  
+  //Headlines
+  h1,h2,h3{
+    font-family: $JosefinSans;
+    font-weight: $fw-300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  //main container
+  .main-container {
+    max-width: 1440px;
+    margin: auto;
+    background-color: $White;
+  }
